@@ -1,13 +1,11 @@
 name: dev
 
-on:
-  pull_request:
-    branches: [ dev ]
+on:  
   push:
     branches: [ dev ]
 
 jobs:
-  execute-tests:
+  test-and-build:
     runs-on: ubuntu-latest
     
     strategy:
