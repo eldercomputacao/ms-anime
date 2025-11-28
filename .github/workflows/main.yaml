@@ -10,7 +10,31 @@ permissions:
   packages: write  # Para Docker registry (se usar GitHub Packages)
 
 jobs:
-  build:
+
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        java-version: [21]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up JDK ${{ matrix.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ matrix.java-version }}
+        distribution: 'temurin'
+        cache: maven
+    
+    - name: Run tests
+      run: ./mvnw clean test
+
+  build-and-push:
+    needs: test  # Adicione esta linha
+    
     runs-on: ubuntu-latest
     
     strategy:
