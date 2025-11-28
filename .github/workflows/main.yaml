@@ -4,6 +4,11 @@ on:
   push:
     branches: [ main ]
 
+# Adicione essas permissões
+permissions:
+  contents: write  # Necessário para criar tags
+  packages: write  # Para Docker registry (se usar GitHub Packages)
+
 jobs:
   build:
     runs-on: ubuntu-latest
