@@ -59,7 +59,7 @@ jobs:
         platforms: linux/amd64,linux/arm64
         tags: |
           elderpereira/ms-anime:latest
-          elderpereira/ms-anime:${{ steps.tag_id.outputs.version }}
+          elderpereira/ms-anime:${{ steps.tag_id.outputs.new_tag }}
           elderpereira/ms-anime:${{ github.sha }}
 
     
