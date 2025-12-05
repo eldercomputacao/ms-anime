@@ -59,7 +59,7 @@ public class AnimeMemoryRepository implements AnimeRepository {
   public List<Anime> findByEpisodes(Integer episodes) {
     return animes.values().stream()
         .filter(anime -> anime.getEpisodes().equals(episodes))
-        .collect(Collectors.toList());
+        .toList();
   }
 
   @Override

@@ -1,0 +1,6 @@
+projectKey=ms-anime
+serverUrl=http://localhost:9000
+serverVersion=9.9.8.100196
+dashboardUrl=http://localhost:9000/dashboard?id=ms-anime
+ceTaskId=AZrnMJVUTtXXLjio0p9d
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AZrnMJVUTtXXLjio0p9d
