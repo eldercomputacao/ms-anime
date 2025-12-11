@@ -10,8 +10,7 @@ jobs:
     
     strategy:
       matrix:
-        java-version: [21]
-    
+        java-version: [21]  
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
