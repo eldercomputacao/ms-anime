@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
 
-# Adicione essas permissões
+# Adicione essas fdfd permissões
 permissions:
   contents: write  # Necessário para criar tags
   packages: write  # Para Docker registry (se usar GitHub Packages)
